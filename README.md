@@ -8,7 +8,7 @@ a Nord color palette, minimalist, and UI tweaked "theme" for Searxng
 - May break after updates to other parts of the project
 - Maybe a little hacky but building off the default theme was the easiest approach
   
-Simple to use by downloading and adding the following (2) binds in your docker compose yml:
+Simple to use by downloading and adding the following (2) binds in your Searxng docker compose yml:
 ```
 services:
   searxng:
