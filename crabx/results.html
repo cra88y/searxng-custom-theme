@@ -19,7 +19,9 @@
 {% endif %}
 
 <div id="results" class="{{ only_template }}">
-
+  {%- if suggestions -%}
+  {%- include 'simple/elements/suggestions.html' -%}
+  {%- endif -%}  
   {%- if answers -%}
     {%- include 'simple/elements/answers.html' -%}
   {%- endif %}
@@ -39,10 +41,6 @@
               {%- endfor -%}
             </details>
           </div>
-        {%- endif -%}
-
-        {%- if suggestions -%}
-          {%- include 'simple/elements/suggestions.html' -%}
         {%- endif -%}
 
         {%- include 'simple/elements/engines_msg.html' -%}
