@@ -179,7 +179,7 @@ template {
     --color-show-btn-background: #4c566a;
     --color-show-btn-font: #e5e9f0;
     --color-search-border: #4c566a;
-    --color-search-shadow: 0 2px 8px rgba(34, 38, 46, .8);
+    --color-search-shadow: 0 4px 16px rgba(34, 38, 46, .9);
     --color-search-background: #2e3440;
     --color-search-font: #e5e9f0;
     --color-search-background-hover: #b48ead;
@@ -2920,8 +2920,11 @@ table.engine-error th.engine-error-type,table.engine-error td.engine-error-type,
     display: block
 }
 
+.index_endpoint{
+    background: var(--color-header-background);
+}
 #main_index {
-    margin-top: 26vh
+    margin-top: 33vh;
 }
 
 .index {
@@ -2951,7 +2954,7 @@ table.engine-error th.engine-error-type,table.engine-error td.engine-error-type,
 
 .index .search_filters {
     display: block;
-    margin: 1rem 0
+    margin: .5rem 0
 }
 
 .index .category label {
@@ -3194,7 +3197,7 @@ table tr.pref-group th {
     background: var(--color-header-background);
     border-bottom: 1px solid var(--color-header-border);
     display: grid;
-    gap: 1rem 1rem;
+    gap: 0.5rem;
     grid-template-columns: 3rem 1fr;
     grid-template-areas: "logo search" "spacer categories"
 }
@@ -3202,7 +3205,7 @@ table tr.pref-group th {
 .category_checkbox,.category_button {
     display: inline-block;
     position: relative;
-    margin-right: 1rem;
+    margin-right: .5rem;
     padding: 0
 }
 
@@ -3405,7 +3408,7 @@ body.results_endpoint #search_view {
     }
 
     .search_filters {
-        margin-top: .5rem;
+        margin-top: .25rem;
         margin-right: 0;
         margin-bottom: 0;
         margin-left: 3.5rem
@@ -3460,7 +3463,7 @@ body.results_endpoint #search_view {
 
     .search_filters {
         margin: 0 10px;
-        padding: .5rem 0
+        padding: .25rem 0
     }
 
     .category {
@@ -4016,6 +4019,7 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 }
 
 .engines {
+    margin-top: .25rem;
     float: right;
     display: flex;
     flex-wrap: wrap;
@@ -4149,6 +4153,7 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 }
 
 #suggestions .wrapper {
+    display: flex;
     width: 100%;
     text-align: left;
     overflow: scroll;
@@ -4226,7 +4231,7 @@ input.suggestion{
 }
 
 #infoboxes .title,#suggestions .title,#search_url .title,#engines_msg .title,#apis .title {
-    margin: 1em 0 .5em;
+    margin: .5em 0 .5em;
     color: var(--color-base-font)
 }
 
@@ -4245,7 +4250,7 @@ summary.title {
 
 #answers {
     grid-area: answers;
-    background: var(--color-answer-background);
+    background: var(--color-header-background);
     padding: 1rem;
     margin-top: 0;
     color: var(--color-answer-font);
@@ -4288,7 +4293,7 @@ summary.title {
 }
 
 #sidebar .infobox h2 {
-    margin: 0 0 .5em
+    text-decoration: underline;
 }
 
 #sidebar .infobox img {
@@ -4325,6 +4330,10 @@ summary.title {
 
 #sidebar .infobox br,#sidebar .infobox .attributes,#sidebar .infobox .urls {
     clear: both
+}
+ul{ 
+    list-style: none;
+    padding: 1rem;
 }
 
 #apis input {
@@ -4371,7 +4380,7 @@ summary.title {
     position: absolute;
     right: 1rem;
     text-align: right;
-    top: 2.7rem;
+    bottom: 2.5rem;
     padding: 0;
     border: 0;
     display: flex;
@@ -4427,14 +4436,14 @@ summary.title {
     margin: 0;
     padding: 0;
     font-size: 1em;
-    background: var(--color-backtotop-background);
+    background: var(--color-header-background);
     position: fixed;
     bottom: 8rem;
     left: 56.3rem;
     transition: opacity .5s;
     opacity: 0;
     pointer-events: none;
-    border-radius: 0px
+    border-radius: 50px
 }
 
 #backToTop a {
