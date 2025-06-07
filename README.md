@@ -13,6 +13,6 @@ Simple to use by downloading and adding the following (2) binds in your Searxng 
 services:
   searxng:
     volumes:
-      - /local/path/to/searxng-custom-themes/crabx:/usr/local/searxng/searx/templates/simple
+      - /local/path/to/searxng-custom-theme/crabx:/usr/local/searxng/searx/templates/simple
       - /local/path/to/searxng-custom-theme/crabx-static/css:/usr/local/searxng/searx/static/themes/simple/css
 ```
