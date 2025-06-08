@@ -3308,7 +3308,8 @@ button.category_button.selected,button.category_button:active {
 }
 
 body.results_endpoint #search_view {
-    padding: .5rem 2.8rem 0 0
+    padding: .5rem 2.8rem 0 0;
+    border-radius: 0 25px 0 25px;
 }
 
 .search_box {
@@ -3484,11 +3485,11 @@ body.results_endpoint #search_view {
 
     #search_view:focus-within {
         display: block;
-        background-color: var(--color-search-background);
+        background-color: var(--color-header-background);
         position: absolute;
         top: 0;
-        height: 100%;
-        width: 100%;
+        height: 100dvh;
+        width: 100dvw;
         z-index: 2000
     }
 
@@ -3576,6 +3577,10 @@ body.results_endpoint #search_view {
 
     .center-alignment-yes #main_results #urls {
         margin-left: 3rem
+    }
+    
+    #results-header{
+        margin-left: 3.5rem;
     }
 
     .center-alignment-yes #main_results #sidebar {
@@ -3698,6 +3703,7 @@ body {
     flex-direction: column;
     height: 100vh;
     margin: 0
+    overflow-x: hidden;
 }
 
 @supports (height: 100dvh) {
@@ -4233,7 +4239,6 @@ input.suggestion{
 }
 
 #infoboxes .title,#suggestions .title,#search_url .title,#engines_msg .title,#apis .title {
-    margin: .5em 0 .5em;
     color: var(--color-base-font)
 }
 
