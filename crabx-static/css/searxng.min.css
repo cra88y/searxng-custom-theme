@@ -162,8 +162,8 @@ template {
     --color-base-font-rgb: 187, 187, 187;
     --color-base-background: #2e3440;
     --color-base-background-mobile: #2e3440;
-    --color-url-font: #88c0d0;
-    --color-url-visited-font: #c09cd9;
+    --color-url-font: #8fbcbb;
+    --color-url-visited-font: #b48ead;
     --color-header-background: #1d2128;
     --color-header-border: #333;
     --color-footer-background: #1d2128;
@@ -197,7 +197,6 @@ template {
     --color-autocomplete-background: #1d2128;
     --color-autocomplete-background-hover: #1d2128;
     --color-answer-font: #d8dee9;
-    --color-answer-background: #2e3440;
     --color-result-keyvalue-col-table: #1d2128;
     --color-result-keyvalue-odd: #1d2128;
     --color-result-keyvalue-even: #2e3440;
@@ -3892,7 +3891,8 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 }
 
 .result .url_wrapper .url_o2 .url_i2 {
-    float: right
+    float: right;
+    color: color: var(--color-base-font);
 }
 
 .result .published_date,.result .result_length,.result .result_views,.result .result_author,.result .result_shipping,.result .result_source_country {
@@ -4203,7 +4203,7 @@ input.suggestion{
 }
 
 #suggestions input[type=submit],#infoboxes input[type=submit],#suggestions .infobox .url a,#infoboxes .infobox .url a {
-    color: var(--color-result-link-font);
+    color: var(--color-url-font);
     text-decoration: none;
     font-size: .9rem
 }
@@ -4254,8 +4254,7 @@ summary.title {
     padding: 1rem;
     margin-top: 0;
     color: var(--color-answer-font);
-    border-radius: 0px;
-    margin-left: 3rem;
+    border-radius: 25px;
 }
 
 #answers h4 {
@@ -4289,11 +4288,7 @@ summary.title {
     margin: 10px 0;
     padding: 1rem;
     font-size: .9em;
-    border-radius: 0%;
-}
-
-#sidebar .infobox h2 {
-    text-decoration: underline;
+    border-radius: 25px;
 }
 
 #sidebar .infobox img {
