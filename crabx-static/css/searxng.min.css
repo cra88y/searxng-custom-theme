@@ -4021,6 +4021,7 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 }
 
 .engines {
+    font-size: .9rem;
     margin-top: .25rem;
     float: right;
     display: flex;
@@ -4030,7 +4031,7 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 }
 
 .engines span {
-    font-size: smaller;
+    font-size: .9rem;
     margin-top: 0;
     margin-bottom: 0;
     margin-right: .5rem;
@@ -4502,6 +4503,13 @@ ul{
         border: none;
         width: auto
     }
+    .center-alignment-no #results-header {
+        margin: 0 .5rem .125rem;
+        padding: 0;
+        float: none;
+        border: none;
+        width: auto
+    }
 
     .center-alignment-no #sidebar input {
         border: 0
@@ -4608,7 +4616,7 @@ ul{
         margin: .5em .5em .5em 0
     }
 
-    #sidebar {
+    #sidebar, #results-header {
         margin: 0 .5rem .125rem;
         padding: 0;
         float: none;
