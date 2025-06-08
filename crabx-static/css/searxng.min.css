@@ -3493,7 +3493,7 @@ body.results_endpoint #search_view {
         z-index: 2000;
         padding: 0 !important;
         box-sizing: border-box;
-        -webkit-overflow-scrolling: touch
+        -webkit-overflow-scrolling: touch;
         -ms-overflow-style: none;  /* Internet Explorer 10+ */
         scrollbar-width: none;
     }
@@ -3713,7 +3713,6 @@ body {
     flex-direction: column;
     height: 100vh;
     margin: 0
-    overflow-x: hidden;
 }
 
 @supports (height: 100dvh) {

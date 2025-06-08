@@ -3460,9 +3460,6 @@ table tr.pref-group th {
     padding: .7em
 }
 
-#main_preferences .preferences_back a {
-    color: var(--color-settings-return-font)
-}
 
 #main_preferences .preferences_back a:first-letter {
     text-transform: uppercase
