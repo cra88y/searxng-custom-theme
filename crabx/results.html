@@ -19,9 +19,14 @@
 {% endif %}
 
 <div id="results" class="{{ only_template }}">
-  {%- if answers -%}
-    {%- include 'simple/elements/answers.html' -%}
-  {%- endif %}
+    <div class="search_filters">
+        {%- if suggestions -%}
+            {%- include 'simple/elements/suggestions.html' -%}
+        {%- endif -%}  
+        {%- if answers -%}
+            {%- include 'simple/elements/answers.html' -%}
+        {%- endif %}
+    </div>
 
     <div id="sidebar">
 
