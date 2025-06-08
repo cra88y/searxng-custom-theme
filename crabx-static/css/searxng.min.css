@@ -4170,7 +4170,6 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
     display: inline;
 }
 .suggest-box{
-    margin-left: 3em;
     display: flex;
 }
 input.suggestion{
@@ -4309,7 +4308,7 @@ summary.title {
 }
 
 #sidebar .infobox .attributes dl {
-    margin: .5em 0
+    margin: .25rem 0
 }
 
 #sidebar .infobox .attributes dt {
