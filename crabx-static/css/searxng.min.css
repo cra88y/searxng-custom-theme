@@ -3309,7 +3309,8 @@ button.category_button.selected,button.category_button:active {
 
 body.results_endpoint #search_view {
     padding: .5rem 2.8rem 0 0;
-    border-radius: 0 25px 0 25px;
+    border-radius: 25px;
+    overflow: hidden;
 }
 
 .search_box {
@@ -3488,10 +3489,11 @@ body.results_endpoint #search_view {
         background-color: var(--color-header-background);
         position: absolute;
         top: 0;
-        height: 45dvh;
+        height: 50dvh;
         width: 100dvw;
         z-index: 2000;
         padding: 0;
+        box-sizing: border-box;
         overflow-x: hidden;
     }
 
@@ -3505,14 +3507,12 @@ body.results_endpoint #search_view {
 
     #search_view:focus-within .search_box #send_search {
         margin-right: 0!important;
-        padding: 0;
     }
 
     #search_view:focus-within .search_box * {
         border: none;
         border-radius: 0%;
         box-shadow: none;
-        padding: 0;
     }
 
     #main_results #q:placeholder-shown~#send_search {
