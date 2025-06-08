@@ -3310,13 +3310,13 @@ button.category_button.selected,button.category_button:active {
 body.results_endpoint #search_view {
     padding: .5rem 2.8rem 0 0;
     border-radius: 25px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .search_box {
     border-radius: 50px;
     overflow: hidden;
-    width: 100%;
+    width: auto;
     max-width: 44rem;
     display: inline-flex;
     flex-direction: row;
@@ -3444,7 +3444,6 @@ body.results_endpoint #search_view {
 
 @media screen and (max-width: 50em) {
     #search_header {
-        width:100dvw;
         margin: 0;
         padding: .1rem 0 0;
         gap: 0 0;
@@ -3456,11 +3455,11 @@ body.results_endpoint #search_view {
     }
 
     .search_box {
-        width: 100dvw
+        width: 100%
     }
 
     #q {
-        width: 100dvw;
+        width: 100%;
         flex: 1
     }
 
@@ -3490,7 +3489,7 @@ body.results_endpoint #search_view {
         position: absolute;
         top: 0;
         height: 50dvh;
-        width: 100dvw;
+        width: auto;
         z-index: 2000;
         padding: 0;
         box-sizing: border-box;
@@ -3499,7 +3498,7 @@ body.results_endpoint #search_view {
 
     #search_view:focus-within .search_box {
         border-bottom: 1px solid var(--color-search-border);
-        width: 100dvw;
+        width: 100%;
         border-radius: 0;
         box-shadow: none;
         padding: 0;
