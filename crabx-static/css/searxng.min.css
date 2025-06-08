@@ -3493,8 +3493,13 @@ body.results_endpoint #search_view {
         z-index: 2000;
         padding: 0 !important;
         box-sizing: border-box;
-        overflow-x: hidden;
-        scrollbar-width: 0;
+        -webkit-overflow-scrolling: touch
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none;
+    }
+
+    #search_view::-webkit-scrollbar {
+        display: none;  /* Safari and Chrome */
     }
 
     #search_view:focus-within .search_box {
