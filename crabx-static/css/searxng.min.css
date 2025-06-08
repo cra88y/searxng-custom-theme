@@ -3443,7 +3443,7 @@ body.results_endpoint #search_view {
 
 @media screen and (max-width: 50em) {
     #search_header {
-        width:100%;
+        width:100dvw;
         margin: 0;
         padding: .1rem 0 0;
         gap: 0 0;
@@ -3455,11 +3455,11 @@ body.results_endpoint #search_view {
     }
 
     .search_box {
-        width: 100%
+        width: 100dvw
     }
 
     #q {
-        width: 100%;
+        width: 100dvw;
         flex: 1
     }
 
@@ -3488,26 +3488,31 @@ body.results_endpoint #search_view {
         background-color: var(--color-header-background);
         position: absolute;
         top: 0;
-        height: 100dvh;
+        height: 45dvh;
         width: 100dvw;
-        z-index: 2000
+        z-index: 2000;
+        padding: 0;
+        overflow-x: hidden;
     }
 
     #search_view:focus-within .search_box {
         border-bottom: 1px solid var(--color-search-border);
-        width: 100%;
+        width: 100dvw;
         border-radius: 0;
-        box-shadow: none
+        box-shadow: none;
+        padding: 0;
     }
 
     #search_view:focus-within .search_box #send_search {
-        margin-right: 0!important
+        margin-right: 0!important;
+        padding: 0;
     }
 
     #search_view:focus-within .search_box * {
         border: none;
         border-radius: 0%;
-        box-shadow: none
+        box-shadow: none;
+        padding: 0;
     }
 
     #main_results #q:placeholder-shown~#send_search {
