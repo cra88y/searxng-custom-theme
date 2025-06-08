@@ -3390,6 +3390,7 @@ body.results_endpoint #search_view {
     display: flex;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
 }
 
