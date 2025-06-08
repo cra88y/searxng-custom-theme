@@ -4289,6 +4289,7 @@ summary.title {
     padding: 1rem;
     font-size: .9em;
     border-radius: 25px;
+    background: var(--color-header-background);
 }
 
 #sidebar .infobox img {
@@ -4711,7 +4712,6 @@ ul{
 
     .infobox {
         border: none!important;
-        background-color: var(--color-sidebar-background)
     }
 
     .numbered_pagination {
