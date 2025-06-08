@@ -4171,7 +4171,7 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 #suggestions .wrapper form {
     display: inline;
 }
-.suggest-box{
+#suggestions {
     display: flex;
 }
 input.suggestion{

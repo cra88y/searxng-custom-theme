@@ -16,16 +16,6 @@
   <div class="search_filters">
     {% include 'simple/filters/time_range.html' %}
   </div>
-  <div class="search_filters">
-    {%- if suggestions -%}
-      {%- include 'simple/elements/suggestions.html' -%}
-    {%- endif -%}
-  </div>
-  <div class="search_filters">
-    {%- if answers -%}
-      {%- include 'simple/elements/answers.html' -%}
-    {%- endif %}
-  </div>
   <input type="hidden" name="theme" value="{{ theme }}" >
   {% if timeout_limit %}<input type="hidden" name="timeout_limit" value="{{ timeout_limit|e }}" >{% endif %}
 </form>
