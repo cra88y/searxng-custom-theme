@@ -3316,7 +3316,7 @@ body.results_endpoint #search_view {
 .search_box {
     border-radius: 50px;
     overflow: hidden;
-    width: auto;
+    width: 100%;
     max-width: 44rem;
     display: inline-flex;
     flex-direction: row;
@@ -3489,9 +3489,9 @@ body.results_endpoint #search_view {
         position: absolute;
         top: 0;
         height: 50dvh;
-        width: auto;
+        width: 100%;
         z-index: 2000;
-        padding: 0;
+        padding: 0 !important;
         box-sizing: border-box;
         overflow-x: hidden;
     }
