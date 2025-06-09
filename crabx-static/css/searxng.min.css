@@ -2030,7 +2030,8 @@ th:hover .engine-tooltip,td:hover .engine-tooltip,.engine-tooltip:hover {
     min-width: 52rem;
     overflow-y: hidden;
     text-align: left;
-    border-radius: 0px
+    border-radius: 0px;
+    max-height: 0;
 }
 
 .autocomplete:active,.autocomplete:focus,.autocomplete:hover {
@@ -2072,7 +2073,7 @@ th:hover .engine-tooltip,td:hover .engine-tooltip,.engine-tooltip:hover {
     display: block;
     background-color: var(--color-autocomplete-background);
     color: var(--color-autocomplete-font);
-    max-height: 100dvh;
+    max-height: 100dvh !important;
     overflow-y: auto;
     z-index: 5000;
     margin-top: 3.5rem;
@@ -3684,8 +3685,7 @@ body.results_endpoint #search_view {
 }
 
 .sxng-icon-set-small {
-    width: 1rem;
-    height: 1rem;
+    width: 0.5rem;
     display: inline-block;
     vertical-align: bottom;
     line-height: 1;
@@ -3809,11 +3809,11 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 }
 
 .result {
-    margin: .25rem 0;
-    padding: .5rem;
+    /*margin: .25rem 0;*/
+    padding: .5rem 1rem;
     box-sizing: border-box;
     width: 100%;
-    border-left: .2rem solid transparent
+    border-left: 0rem solid transparent
 }
 
 .result h3 {
@@ -3840,8 +3840,8 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 }
 
 .result .cache_link,.result .proxyfied_link {
-    font-size: smaller!important;
-    margin-left: .5rem
+    font-size: 0.8rem;
+    margin-left: .25rem
 }
 
 .result .content,.result .stat {
@@ -4004,7 +4004,6 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 
 .category-videos,.category-news,.category-map,.category-music,.category-files,.category-social {
     border: 1px solid var(--color-result-border);
-    margin: 0 .5rem 1rem!important;
     border-radius: 0px
 }
 
@@ -4060,10 +4059,10 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 }
 
 .engines span {
-    font-size: .9rem;
+    font-size: .8rem;
     margin-top: 0;
     margin-bottom: 0;
-    margin-right: .5rem;
+    margin-right: .25rem;
     margin-left: 0
 }
 
@@ -4560,7 +4559,6 @@ ul{
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
-        padding: 3px 0 0
     }
 
     .center-alignment-no .result-images {
@@ -4735,8 +4733,6 @@ ul{
 
     .result {
         background: var(--color-result-background);
-        margin: .25rem 1rem;
-        width: 96%;
         border-radius: 0px
     }
 
