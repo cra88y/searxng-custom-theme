@@ -2074,8 +2074,8 @@ th:hover .engine-tooltip,td:hover .engine-tooltip,.engine-tooltip:hover {
     display: block;
     background-color: var(--color-autocomplete-background);
     color: var(--color-autocomplete-font);
-    height: auto;
-    overflow-y: auto;
+    /*max-height: 32rem;*/
+    /*overflow-y: auto;*/
     z-index: 5000;
     margin-top: 3.5rem;
     border-radius: 0 0 25px 25px;
@@ -3494,7 +3494,7 @@ body.results_endpoint #search_view {
         background-color: var(--color-header-background);
         position: absolute;
         top: 0;
-        height: auto;
+        height: 100%;
         max-width: 100dvw;
         width: 100%;
         z-index: 2000;
