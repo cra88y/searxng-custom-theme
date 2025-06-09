@@ -2030,14 +2030,13 @@ th:hover .engine-tooltip,td:hover .engine-tooltip,.engine-tooltip:hover {
     width: 44rem;
     max-width: calc(100% - 1rem);
     max-height: 0;
-    height: 0;
     overflow-y: hidden;
     text-align: left;
     border-radius: 0px
 }
 
 .autocomplete:active,.autocomplete:focus,.autocomplete:hover {
-    background-color: var(--color-autocomplete-background)
+    background-color: var(--color-header-background)
 }
 
 .autocomplete:empty {
@@ -2079,7 +2078,7 @@ th:hover .engine-tooltip,td:hover .engine-tooltip,.engine-tooltip:hover {
     border-radius: 0 0 25px 25px;
 }
 .autocomplete.open{
-    max-height: 0;
+    display:none;
 }
 
 .autocomplete.open:empty {
@@ -3487,9 +3486,6 @@ body.results_endpoint #search_view {
         margin: 0!important
     }
     
-    #search_view > .autocomplete {
-        display: none;
-    }
     #search_view:focus-within > .autocomplete {
         display: block;
     }
