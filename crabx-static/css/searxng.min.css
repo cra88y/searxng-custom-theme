@@ -3482,13 +3482,20 @@ body.results_endpoint #search_view {
         padding: 1rem!important;
         margin: 0!important
     }
-
+    
+    #search_view > .autocomplete {
+        display: none;
+    }
+    #search_view:focus-within > .autocomplete {
+        display: block;
+    }
     #search_view:focus-within {
         display: block;
         background-color: var(--color-header-background);
         position: absolute;
         top: 0;
         height: 100%;
+        max-width: 100dvw;
         width: 100%;
         z-index: 2000;
         padding: 0 !important;
@@ -3496,9 +3503,10 @@ body.results_endpoint #search_view {
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: none;  /* Internet Explorer 10+ */
         scrollbar-width: none;
+        border-radius: 0 0 25px 25px;
     }
 
-    #search_view::-webkit-scrollbar {
+    #search_view:focus-within::-webkit-scrollbar {
         display: none;  /* Safari and Chrome */
     }
 
