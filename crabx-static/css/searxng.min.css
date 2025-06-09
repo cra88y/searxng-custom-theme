@@ -2030,6 +2030,7 @@ th:hover .engine-tooltip,td:hover .engine-tooltip,.engine-tooltip:hover {
     width: 44rem;
     max-width: calc(100% - 1rem);
     max-height: 0;
+    height: 0;
     overflow-y: hidden;
     text-align: left;
     border-radius: 0px
@@ -2066,7 +2067,8 @@ th:hover .engine-tooltip,td:hover .engine-tooltip,.engine-tooltip:hover {
     cursor: inherit
 }
 
-.autocomplete.open {
+
+#search_view:focus-within > .autocomplete.open {
     display: block;
     background-color: var(--color-autocomplete-background);
     color: var(--color-autocomplete-font);
@@ -2075,7 +2077,9 @@ th:hover .engine-tooltip,td:hover .engine-tooltip,.engine-tooltip:hover {
     z-index: 5000;
     margin-top: 3.5rem;
     border-radius: 0 0 25px 25px;
-    padding-bottom: .5rem;
+}
+.autocomplete.open{
+    max-height: 0;
 }
 
 .autocomplete.open:empty {
