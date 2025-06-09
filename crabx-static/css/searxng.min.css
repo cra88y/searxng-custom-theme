@@ -3505,7 +3505,8 @@ body.results_endpoint #search_view {
         border-radius: 0 0 25px 25px;
     }
     .autocomplete{
-        width: 100%;
+        /*width: 100dvw;*/
+        min-width: 100%;
     }
     .search_box{
         max-width: 100%;
