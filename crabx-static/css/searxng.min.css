@@ -2066,8 +2066,11 @@ th:hover .engine-tooltip,td:hover .engine-tooltip,.engine-tooltip:hover {
     cursor: inherit
 }
 
+#search_view:focus-within > .search_box > .autocomplete.open {
+    display: block;
+}
 
-#search_view:focus-within > .autocomplete.open {
+#search_view:focus-within > .search_box > .autocomplete.open {
     display: block;
     background-color: var(--color-autocomplete-background);
     color: var(--color-autocomplete-font);
@@ -3486,9 +3489,6 @@ body.results_endpoint #search_view {
         margin: 0!important
     }
     
-    #search_view:focus-within > .autocomplete {
-        display: block;
-    }
     #search_view:focus-within {
         display: block;
         background-color: var(--color-header-background);
