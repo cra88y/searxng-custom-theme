@@ -3322,7 +3322,7 @@ body.results_endpoint #search_view {
     border-radius: 50px;
     overflow: hidden;
     width: 100%;
-    max-width: 44rem;
+    max-width: 52rem;
     display: inline-flex;
     flex-direction: row;
     white-space: nowrap;
@@ -3506,6 +3506,9 @@ body.results_endpoint #search_view {
     }
     .autocomplete{
         width: 100%;
+    }
+    .search_box{
+        max-width: 100%;
     }
 
     #search_view:focus-within::-webkit-scrollbar {
