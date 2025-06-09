@@ -2027,9 +2027,7 @@ th:hover .engine-tooltip,td:hover .engine-tooltip,.engine-tooltip:hover {
 /*! Autocomplete.js v2.6.3 | license MIT | (c) 2017, Baptiste Donaux | http://autocomplete-js.com */
 .autocomplete {
     position: absolute;
-    width: 44rem;
-    max-width: calc(100% - 1rem);
-    max-height: 0;
+    min-width: 52rem;
     overflow-y: hidden;
     text-align: left;
     border-radius: 0px
@@ -2074,8 +2072,8 @@ th:hover .engine-tooltip,td:hover .engine-tooltip,.engine-tooltip:hover {
     display: block;
     background-color: var(--color-autocomplete-background);
     color: var(--color-autocomplete-font);
-    /*max-height: 32rem;*/
-    /*overflow-y: auto;*/
+    max-height: 100dvh;
+    overflow-y: auto;
     z-index: 5000;
     margin-top: 3.5rem;
     border-radius: 0 0 25px 25px;
@@ -3317,6 +3315,7 @@ button.category_button.selected,button.category_button:active {
 body.results_endpoint #search_view {
     padding: .5rem 2.8rem 0 0;
     border-radius: 25px;
+    height: auto;
 }
 
 .search_box {
@@ -3505,6 +3504,9 @@ body.results_endpoint #search_view {
         scrollbar-width: none;
         border-radius: 0 0 25px 25px;
     }
+    .autocomplete{
+        width: 100%;
+    }
 
     #search_view:focus-within::-webkit-scrollbar {
         display: none;  /* Safari and Chrome */
@@ -3529,7 +3531,7 @@ body.results_endpoint #search_view {
     }
 
     #main_results #q:placeholder-shown~#send_search {
-        margin-right: 2.6rem;
+        /*margin-right: 2.6rem;*/
         transition: margin .1s
     }
 }
