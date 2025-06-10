@@ -2034,6 +2034,7 @@ th:hover .engine-tooltip,td:hover .engine-tooltip,.engine-tooltip:hover {
     max-height: 0;
 }
 
+
 .autocomplete:active,.autocomplete:focus,.autocomplete:hover {
     background-color: var(--color-header-background)
 }
@@ -2050,7 +2051,7 @@ th:hover .engine-tooltip,td:hover .engine-tooltip,.engine-tooltip:hover {
 
 .autocomplete>ul>li {
     cursor: pointer;
-    padding: .5rem 1rem
+    padding:1rem
 }
 
 .autocomplete>ul>li.active,.autocomplete>ul>li:active,.autocomplete>ul>li:focus,.autocomplete>ul>li:hover {
@@ -2085,16 +2086,6 @@ th:hover .engine-tooltip,td:hover .engine-tooltip,.engine-tooltip:hover {
 
 .autocomplete.open:empty {
     display: none
-}
-
-@media screen and (max-width: 50em) {
-    .autocomplete>ul>li {
-        padding:1rem
-    }
-}
-
-#main_results #results.image-detail-open.only_template_images {
-    width: min(98%,59.25rem)!important
 }
 
 #main_results #results.only_template_images.image-detail-open #backToTop {
@@ -2300,7 +2291,7 @@ article.result-images .detail {
         left: 0;
         padding: 1rem
     }
-
+    
     #results.image-detail-open article.result-images[data-vim-selected] .detail a.result-images-source img {
         width: 100%;
         max-height: calc(100vh - 20rem);
@@ -4079,44 +4070,44 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 }
 
 .result-images {
-    background: var(--color-header-background);
+    /*background: var(--color-header-background);*/
     border-radius: 25px;
     max-width: fit-content;
-    padding: .5rem;
-    margin: 0;
+    padding: .25rem;
     border: none !important;
 }
 
 .result-images>a {
     position: relative;
     outline: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: max-content;
+    overflow:hidden;
 }
 
 .result-images img {
-    margin: 0;
-    padding: 0;
     border: none;
-    width: 100%;
+    height: 15.5rem;
+    border-radius: 15px;
+    width: fit-content;
     object-fit: contain;
+    min-width: 0;
 }
 
 .result-images .image_resolution {
     font-size: .9rem;
-    color: var(--color-image-resolution-font);
+    align-self: flex-start;
 }
 
 .result-images span.title,.result-images span.source {
-    display: block;
-    align-self: flex-start;
     font-size: .9rem;
     color: var(--color-result-image-span-font);
-    padding: .25rem 0 0;
+    padding: .125rem 0 0;
     overflow: hidden;
     text-overflow: ellipsis;
-    /*white-space: nowrap*/
+    white-space: nowrap;
+    width: 0;
+    min-width: 100%
 }
 
 .result-images span.source {
@@ -4153,7 +4144,7 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 }
 
 #results {
-    max-width: 99%;
+    max-width: 100%;
     margin-top: .125rem;
     /*margin-right: 2rem;*/
     margin-bottom: 0;
@@ -4179,11 +4170,13 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 #suggestions .wrapper {
     display: flex;
     width: 100%;
+    justify-content: center;
     text-align: left;
     overflow: scroll;
     -webkit-overflow-scrolling: touch
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none; 
+    padding: 0 .5rem .5rem;
 }
 
 #suggestions .wrapper::-webkit-scrollbar {
@@ -4192,9 +4185,9 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 
 #suggestions .wrapper form {
     display: inline;
-    border-radius: 25px;
+    border-radius: 50px;
     border: .125rem solid #eee2;
-    background: #0003;
+    background: var(--color-header-background);
     padding: .125rem;
     margin: 0.125rem;
     padding-right: .5rem;
@@ -4237,7 +4230,7 @@ input.suggestion{
     font-size: .9rem
 }
 
-#suggestions input[type=submit]:hover,#infoboxes input[type=submit]:hover,#suggestions .infobox .url a:hover,#infoboxes .infobox .url a:hover {
+#infoboxes input[type=submit]:hover, #infoboxes .infobox .url a:hover {
     text-decoration: underline
 }
 
@@ -4447,7 +4440,6 @@ ul{
 .page_number {
     background: transparent!important;
     color: var(--color-result-link-font)!important;
-    text-decoration: underline
 }
 
 .page_number_current {
@@ -4600,7 +4592,6 @@ ul{
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
     justify-content: center;
 }
 
@@ -4678,11 +4669,15 @@ ul{
     .result-images {
         border-bottom: none!important;
     }
-
-    .image_result,.image_result img {
-        max-width: 98%
+    .result-images img {
+        border: none;
+        width: 45vw;
+        border-radius: 15px;
+        height: fit-content;
+        object-fit: contain;
+        min-width: 0;
     }
-
+    
     #backToTop {
         display: none
     }
