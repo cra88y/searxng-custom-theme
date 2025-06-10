@@ -4083,14 +4083,10 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
     background: var(--color-header-background);
     border-radius: 25px;
     max-width: 48%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
+    flex: 1 1 auto;
     padding: 1rem;
     margin: .5rem;
     border: none!important;
-    height: 12rem;
 }
 
 .result-images>a {
@@ -4105,18 +4101,12 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
     margin: 0;
     padding: 0;
     border: none;
-    height: 100%;
-    max-height: 14rem;
-    max-width: 100%;
-    width: auto;
-    object-fit: scale-down;
-    vertical-align: bottom;
+    width: 100%;
+    object-fit: contain;
 }
 
 .result-images .image_resolution {
-    position: absolute;
-    left: 0;
-    top: 0;
+    padding: .5rem;
     font-size: .9rem;
     color: var(--color-image-resolution-font);
 }
@@ -4607,7 +4597,7 @@ ul{
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
 }
 
@@ -4684,7 +4674,6 @@ ul{
 
     .result-images {
         border-bottom: none!important;
-        max-width: 42%;
     }
 
     .image_result,.image_result img {
@@ -4740,14 +4729,6 @@ ul{
         border-radius: 0px
     }
     
-
-    .result-images {
-        margin: 0;
-        /*height: 10rem;*/
-        background: var(--color-base-background-mobile);
-        width: unset
-    }
-
     .infobox {
         border: none!important;
     }
