@@ -2135,7 +2135,7 @@ article.result-images .detail {
     padding: 0;
     margin: 0;
     border: none;
-    object-fit: contain;
+    object-fit: scale-down;
     width: inherit;
     height: inherit;
     max-width: 100%;
@@ -3793,7 +3793,7 @@ article[data-vim-selected] {
 article.result-images[data-vim-selected] {
     background: var(--color-result-vim-arrow);
     border: none;
-    border-radius: 0px
+    border-radius: 25px
 }
 
 article.result-images[data-vim-selected] .image_thumbnail {
@@ -3812,7 +3812,7 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
     /*margin: .25rem 0;*/
     padding: .5rem 1rem;
     box-sizing: border-box;
-    width: 100%;
+    max-width: 100%;
     border-left: 0rem solid transparent
 }
 
@@ -4080,17 +4080,25 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 }
 
 .result-images {
+    background: var(--color-header-background);
+    border-radius: 25px;
+    max-width: 48%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
     flex-grow: 1;
-    padding: .5rem .5rem 3rem;
-    margin: .25rem;
+    padding: 1rem;
+    margin: .5rem;
     border: none!important;
     height: 12rem;
-    width: unset
 }
 
 .result-images>a {
     position: relative;
-    outline: none
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .result-images img {
@@ -4098,36 +4106,33 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
     padding: 0;
     border: none;
     height: 100%;
+    max-height: 14rem;
+    max-width: 100%;
     width: auto;
-    object-fit: cover;
+    object-fit: scale-down;
     vertical-align: bottom;
-    background: var(--color-result-image-background)
 }
 
 .result-images .image_resolution {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    background: var(--color-image-resolution-background);
-    padding: .3rem .5rem;
+    left: 0;
+    top: 0;
     font-size: .9rem;
     color: var(--color-image-resolution-font);
 }
 
 .result-images span.title,.result-images span.source {
     display: block;
-    position: absolute;
-    width: 100%;
+    align-self: flex-start;
     font-size: .9rem;
     color: var(--color-result-image-span-font);
-    padding: .5rem 0 0;
+    padding: .25rem 0 0;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap
+    /*white-space: nowrap*/
 }
 
 .result-images span.source {
-    padding: 1.8rem 0 0;
     font-size: .7rem
 }
 
@@ -4161,6 +4166,7 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 }
 
 #results {
+    max-width: 99%;
     margin-top: .25rem;
     margin-right: 2rem;
     margin-bottom: 0;
@@ -4600,7 +4606,9 @@ ul{
 #main_results div#results.only_template_images #urls {
     margin: 0;
     display: flex;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 #main_results div#results.only_template_images #urls:after {
@@ -4675,7 +4683,8 @@ ul{
     }
 
     .result-images {
-        border-bottom: none!important
+        border-bottom: none!important;
+        max-width: 42%;
     }
 
     .image_result,.image_result img {
@@ -4730,15 +4739,11 @@ ul{
         border: 1px solid var(--color-result-vim-arrow);
         border-radius: 0px
     }
-
-    .result {
-        background: var(--color-result-background);
-        border-radius: 0px
-    }
+    
 
     .result-images {
         margin: 0;
-        height: 10rem;
+        /*height: 10rem;*/
         background: var(--color-base-background-mobile);
         width: unset
     }
