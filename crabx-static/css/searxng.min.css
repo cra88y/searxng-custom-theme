@@ -3839,7 +3839,8 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
     padding: 0;
     max-width: 54em;
     word-wrap: break-word;
-    line-height: 1.24
+    line-height: 1.24;
+    display: flow-root;
 }
 
 .result .content .highlight,.result .stat .highlight {
@@ -3935,7 +3936,7 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
     margin-right: .5rem;
     border-radius:25px;
     width: fit-content;
-    height: 10rem;
+    height: 12rem;
     object-fit: contain;
 }
 
@@ -4024,8 +4025,8 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 }
 
 .result-videos .content {
-    overflow: hidden
-    height: 4.3ch;
+    overflow: hidden;
+    height: 3.9ch;
 }
 
 .result-videos .embedded-video iframe {
@@ -4491,7 +4492,12 @@ ul{
     .center-alignment-no #links_on_top span {
         display:none
     }
-
+    .result img.thumbnail {
+        height: 10rem;
+    }
+    .result .content, .result .stat {
+        display: inline-block;
+    }
     .center-alignment-no .page_with_header {
         margin: 2rem .5rem;
         width: auto
@@ -4609,10 +4615,6 @@ ul{
 @media screen and (max-width: 50em) {
     #links_on_top span {
         display:none
-    }
-    
-    .result-videos img.thumbnail {
-        float: none;
     }
     
     .page_with_header {
