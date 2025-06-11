@@ -3941,9 +3941,11 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
     margin-top: .25rem;
     margin-bottom: .25rem;
     margin-left: 1rem;
-    border-radius: 25px;
-    width: fit-content;
+    border: none;
     height: 10rem;
+    border-radius: 15px;
+    width: fit-content;
+    min-width: 0;
     object-fit: contain;
     box-shadow: var(--color-search-shadow);
 }
