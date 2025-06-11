@@ -2396,7 +2396,6 @@ iframe[src^="https://genius.com/songs"] {
 }
 
 .engine-stats tr td,.engine-stats tr th {
-    border-bottom: 1px solid var(--color-result-border);
     padding: .25rem
 }
 
@@ -2460,18 +2459,18 @@ table.engine-error th.engine-error-type,table.engine-error td.engine-error-type,
 }
 
 .bar-chart-bar {
-    border: 3px solid var(--color-bar-chart-primary);
-    margin: 1px 0
+    border: .25rem solid var(--color-result-engines-font);
+    margin: 1px 0;
 }
 
 .bar-chart-serie1 {
-    border: 3px solid var(--color-bar-chart-primary);
+    border: .25rem solid var(--color-result-engines-font);
     margin: 1px 0;
     float: left
 }
 
 .bar-chart-serie2 {
-    border: 3px solid var(--color-bar-chart-secondary);
+    border: .25rem solid var(--color-result-engines-font);
     margin: 1px 0;
     float: left
 }
@@ -4173,7 +4172,6 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 #suggestions .wrapper {
     display: flex;
     width: 100%;
-    justify-content: center;
     text-align: left;
     overflow: scroll;
     -webkit-overflow-scrolling: touch
