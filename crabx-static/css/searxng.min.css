@@ -1,6 +1,5 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
-    line-height: 1.15;
     -webkit-text-size-adjust: 100%
 }
 
@@ -73,7 +72,7 @@ img {
 button,input,optgroup,select,textarea {
     font-family: inherit;
     font-size: 100%;
-    line-height: 1.15;
+    line-height: 1.45;
     margin: 0
 }
 
@@ -1398,7 +1397,7 @@ div.selectable_url {
     margin: .1em;
     overflow: hidden;
     height: 1.2em;
-    line-height: 1.2em;
+    line-height: 1.45em;
     border-radius: 0px
 }
 
@@ -3238,11 +3237,11 @@ button.category_button {
     color: var(--color-base-font);
     cursor: pointer;
     padding: .25rem 1rem .5rem .75rem;
-    border-radius: 25px;
-    display: inline-flex;
+    /*border-radius: 25px;*/
+    display: inline-flex;s
     align-items: center;
-    text-transform: capitalize;
-    font-size: .9em;
+    text-transform: lowercase;
+    font-size: 1rem;
     border: none;
     border-bottom: 2px solid transparent
 }
@@ -3347,7 +3346,7 @@ body.results_endpoint #search_view {
 #q,#send_search {
     display: block;
     margin: 0;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1rem;
     background: none repeat scroll 0 0 var(--color-search-background);
     border: none;
     outline: none;
@@ -3474,7 +3473,7 @@ body.results_endpoint #search_view {
     }
 
     .category_checkbox label,.category_button {
-        padding: .5rem!important;
+        padding: .5rem 1rem !important;
         margin: 0!important
     }
     
@@ -3704,7 +3703,7 @@ html {
     padding: 0;
     margin: 0;    
     scroll-behavior: smooth;
-    line-height: 1.25;
+    line-height: 1.45;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     font-variant-numeric: proportional-nums;
@@ -3990,7 +3989,7 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
     margin: .25rem 0 0;
     padding: 0;
     word-wrap: break-word;
-    line-height: 1.24;
+    line-height: 1.45;
     font-style: italic
 }
 
@@ -4056,6 +4055,7 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 .engines {
     text-align: end;
     font-size: .9rem;
+    margin-top: .125rem;
     width: 100%;
     float: right;
     flex-wrap: wrap;
@@ -4285,7 +4285,7 @@ summary.title {
 #answers {
     grid-area: answers;
     background: var(--color-header-background);
-    padding: 2rem;
+    padding: 1.5rem;
     margin-top: 0;
     color: var(--color-base-font);
     border-radius: 25px;
@@ -4320,7 +4320,7 @@ summary.title {
 
 #sidebar .infobox {
     margin: .5rem 0;
-    padding: 2rem;
+    padding: 1.5rem;
     font-size: 1em;
     border-radius: 25px;
     background: var(--color-header-background);
@@ -4369,7 +4369,7 @@ p{
 }
 ul{ 
     list-style: none;
-    padding: .5rem;
+    padding: .25rem;
     margin: 0;
 }
 
@@ -4808,7 +4808,8 @@ pre code {
     textarea,
     textarea:focus,
     input,
-    input:focus {
+    input:focus,
+    #q {
         font-size: 16px !important;
     }
 }
