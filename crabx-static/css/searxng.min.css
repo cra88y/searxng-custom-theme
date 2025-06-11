@@ -3942,10 +3942,12 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
     margin-bottom: .25rem;
     margin-left: 1rem;
     border: none;
-    height: 10rem;
     border-radius: 15px;
-    width: fit-content;
+    max-width: 45%;
+    height: fit-content;
+    max-height: 50dvh;
     min-width: 0;
+    min-height: 0;
     object-fit: contain;
     box-shadow: var(--color-search-shadow);
 }
@@ -4516,7 +4518,7 @@ ul{
         display:none
     }
     .result img.thumbnail {
-        height: 8rem;
+        /*height: 8rem;*/
         border-radius: 15px;
     }
     .result-videos .content {
