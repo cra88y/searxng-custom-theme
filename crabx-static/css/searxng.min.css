@@ -3346,12 +3346,12 @@ body.results_endpoint #search_view {
 #q,#send_search {
     display: block;
     margin: 0;
-    padding: 0.5rem 1rem
+    padding: 0.5rem 1rem;
     background: none repeat scroll 0 0 var(--color-search-background);
     border: none;
     outline: none;
     color: var(--color-search-font);
-    font-size: 1.1rem;
+    font-size: 16px;
     z-index: 100
 }
 
@@ -3843,8 +3843,11 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
     padding: 0;
     max-width: 54em;
     word-wrap: break-word;
-    line-height: 1.24;
-    display: flow-root;
+    line-height: 1.45;
+    display: block;
+    hyphens: auto;
+    overflow: hidden;
+    height: 3.9ch;
 }
 
 .result .content .highlight,.result .stat .highlight {
@@ -3937,11 +3940,13 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 .result img.thumbnail {
     float: right;
     margin-top: .25rem;
-    margin-right: .5rem;
-    border-radius:25px;
+    margin-bottom: .5rem;
+    margin-left: 1rem;
+    border-radius: 25px;
     width: fit-content;
-    height: 12rem;
+    height: 10rem;
     object-fit: contain;
+    box-shadow: var(--color-search-shadow);
 }
 
 .result .break {
@@ -4026,11 +4031,13 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 
 .result-videos img.thumbnail {
     float: left;
+    margin-right: 1rem;
 }
 
 .result-videos .content {
     overflow: hidden;
     height: 3.9ch;
+    display: flow-root;
 }
 
 .result-videos .embedded-video iframe {
@@ -4046,13 +4053,14 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 }
 
 .engines {
+    text-align: end;
     font-size: .9rem;
-    margin-top: .25rem;
+    width: 100%;
     float: right;
-    display: flex;
+    margin-top: .25rem;
     flex-wrap: wrap;
     justify-content: flex-end;
-    color: var(--color-result-engines-font)
+    color: var(--color-result-engines-font);
 }
 
 .engines span {
@@ -4498,10 +4506,11 @@ ul{
         display:none
     }
     .result img.thumbnail {
-        height: 10rem;
+        height: 8rem;
+        border-radius: 15px;
     }
-    .result .content, .result .stat {
-        display: inline-block;
+    .result-videos .content {
+        display: flow-root;
     }
     .center-alignment-no .page_with_header {
         margin: 2rem .5rem;
