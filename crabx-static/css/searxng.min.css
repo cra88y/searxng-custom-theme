@@ -3678,7 +3678,7 @@ body.results_endpoint #search_view {
     vertical-align: middle;
     line-height: 1;
     text-decoration: inherit;
-    transform: scale(1)
+    transform: scale(0.8)
 }
 
 .sxng-icon-set-big {
@@ -3844,7 +3844,7 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
     max-width: 54em;
     word-wrap: break-word;
     line-height: 1.45;
-    display: block;
+    display: inline;
     hyphens: auto;
     overflow: hidden;
 }
@@ -4077,7 +4077,10 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 
 .highlight {
     color: var(--color-result-link-font-highlight);
-    background: inherit
+    background: inherit;
+}
+.result div.highlight {
+    display: inline-block;
 }
 
 .empty_element {
@@ -4268,7 +4271,7 @@ input.suggestion{
 
 #infoboxes .title,#suggestions .title,#search_url .title,#engines_msg .title,#apis .title {
     color: var(--color-base-font);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 summary.title {
@@ -4282,7 +4285,7 @@ summary.title {
 #answers {
     grid-area: answers;
     background: var(--color-header-background);
-    padding: 1rem;
+    padding: 2rem;
     margin-top: 0;
     color: var(--color-base-font);
     border-radius: 25px;
@@ -4302,7 +4305,7 @@ summary.title {
 }
 
 #answers .answer-url {
-    margin: 5px 10px 10px auto
+    text-align: end;
 }
 
 #infoboxes form {
@@ -4316,9 +4319,9 @@ summary.title {
 }
 
 #sidebar .infobox {
-    margin: 10px 0;
-    padding: 1rem;
-    font-size: .9em;
+    margin: .5rem 0;
+    padding: 2rem;
+    font-size: 1em;
     border-radius: 25px;
     background: var(--color-header-background);
 }
@@ -4329,7 +4332,6 @@ summary.title {
     justify-self: anchor-center;
     border-radius: 15px;
     display: flex;
-    flex-direction: column;
     padding: 0;
 }
 
@@ -4413,9 +4415,9 @@ ul{
 
 #links_on_top {
     position: absolute;
-    right: 1rem;
     text-align: right;
-    top: 2.5rem;
+    top: 1.125rem;
+    right: .5rem;
     padding: 0;
     border: 0;
     display: flex;
@@ -4516,7 +4518,7 @@ ul{
         border-radius: 15px;
     }
     .result-videos .content {
-        display: flow-root;
+        display: inline-block;
     }
     .center-alignment-no .page_with_header {
         margin: 2rem .5rem;
@@ -4554,9 +4556,8 @@ ul{
     .center-alignment-no #sidebar input {
         border: 0
     }
-
-    .center-alignment-no .result .thumbnail {
-        max-width: 98%
+    .result .thumbnail {
+        height:9rem;
     }
 
     .center-alignment-no .result .url span.url {
@@ -4640,7 +4641,9 @@ ul{
         margin: 2rem .5rem;
         width: auto
     }
-
+    .result-videos .content {
+        display: inline-block;
+    }
     #infoboxes {
         position: inherit;
         max-width: inherit
@@ -4651,7 +4654,6 @@ ul{
     }
 
     #infoboxes .infobox img {
-        float: left;
         max-width: 16em;
     }
 
@@ -4668,7 +4670,7 @@ ul{
     }
 
     .result .thumbnail {
-        max-width: 98%
+        height:8rem;
     }
 
     .result .url span.url {
@@ -4722,12 +4724,7 @@ ul{
         grid-template-columns: 100%;
         margin: 0 auto
     }
-
-    #links_on_top {
-        top: 1.4rem;
-        right: 10px
-    }
-
+    
     #main_index #links_on_top {
         top: .5rem;
         right: .5rem
