@@ -1673,7 +1673,8 @@ ul.tabs li {
 
 .tabs>label.active,.tabs>li>a.active {
     border-bottom: 2px solid var(--color-categories-item-border-selected);
-    color: var(--color-categories-item-selected-font)
+    background: var(--color-categories-item-selected);
+    color: var(--color-categories-item-selected-font);
 }
 
 .tabs>label:hover,.tabs>li>a:hover {
@@ -1690,6 +1691,7 @@ ul.tabs li {
 
 .tabs>label:last-of-type {
     border-bottom: 2px solid var(--color-categories-item-border-selected);
+    background: var(--color-categories-item-selected);
     color: var(--color-categories-item-selected-font);
     letter-spacing: -.1px
 }
@@ -3237,7 +3239,6 @@ button.category_button {
     color: var(--color-base-font);
     cursor: pointer;
     padding: .25rem 1rem .5rem .75rem;
-    /*border-radius: 25px;*/
     display: inline-flex;s
     align-items: center;
     text-transform: lowercase;
@@ -3250,7 +3251,7 @@ button.category_button svg {
     padding-right: .2rem
 }
 
-button.category_button.selected,button.category_button:active {
+button.category_button.selected, button.category_button:active {
     color: var(--color-categories-item-selected-font);
     border-bottom: 2px solid var(--color-categories-item-border-selected)
 }
@@ -4210,9 +4211,8 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
     border-radius: 50px;
     border: .125rem solid #eee2;
     background: var(--color-header-background);
-    padding: .125rem;
+    padding: .125rem .5rem;
     margin: 0.125rem;
-    padding-right: .5rem;
 }
 #suggestions {
     display: flex;
