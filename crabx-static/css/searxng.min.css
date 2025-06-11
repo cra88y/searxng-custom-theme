@@ -3841,7 +3841,7 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
     font-size: .9em;
     margin: 0;
     padding: 0;
-    max-width: 54em;
+    max-width: 100%;
     word-wrap: break-word;
     line-height: 1.45;
     display: inline;
@@ -3945,7 +3945,7 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
     border-radius: 15px;
     max-width: 45%;
     height: fit-content;
-    max-height: 50dvh;
+    max-height: 10rem;
     min-width: 0;
     min-height: 0;
     object-fit: contain;
@@ -4523,6 +4523,7 @@ ul{
     }
     .result-videos .content {
         display: inline-block;
+        max-width:100%;
     }
     .center-alignment-no .page_with_header {
         margin: 2rem .5rem;
@@ -4647,6 +4648,7 @@ ul{
     }
     .result-videos .content {
         display: inline-block;
+        
     }
     #infoboxes {
         position: inherit;
