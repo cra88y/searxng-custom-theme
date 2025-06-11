@@ -209,7 +209,7 @@ template {
     --color-result-link-font: #88c0d0;
     --color-result-link-font-highlight: #88c0d0;
     --color-result-link-visited-font: #d08770;
-    --color-result-publishdate-font: #4c566a;
+    --color-result-publishdate-font: var(--color-answer-font);
     --color-result-engines-font: #88c0d0;
     --color-result-search-url-border: #4c566a;
     --color-result-search-url-font: #e5e9f0;
@@ -3674,9 +3674,9 @@ body.results_endpoint #search_view {
 }
 
 .sxng-icon-set-small {
-    width: 0.5rem;
+    width: 1rem;
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: middle;
     line-height: 1;
     text-decoration: inherit;
     transform: scale(1)
@@ -3807,9 +3807,9 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 }
 
 .result h3 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     word-wrap: break-word;
-    margin: .125rem 0 .25rem 0;
+    margin: .125rem 0 0 0;
     padding: 0
 }
 
@@ -3850,13 +3850,13 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 }
 
 .result .altlink a {
-    font-size: .9em;
-    margin: 0 10px 0 0;
-    padding: 5px 10px;
-    border-radius: 0px;
+    font-size: 1rem;
+    padding: .25rem .5rem;
+    border-radius: 50px;
     background: var(--color-show-btn-background);
     color: var(--color-show-btn-font);
-    cursor: pointer
+    cursor: pointer;
+    display: inline-block;
 }
 
 .result .altlink a:hover {
@@ -3917,7 +3917,8 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 
 .result .published_date,.result .result_length,.result .result_views,.result .result_author,.result .result_shipping,.result .result_source_country {
     font-size: .8em;
-    color: var(--color-result-publishdate-font)
+    color: var(--color-result-publishdate-font);
+    padding: .125rem 0;
 }
 
 .result .result_price {
@@ -3925,12 +3926,18 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
     color: var(--color-result-description-highlight-font)
 }
 
+.result p {
+    margin: .25rem 0;
+}
+
 .result img.thumbnail {
-    float: left;
-    padding-top: .5rem;
-    padding-right: 1rem;
-    width: 7rem;
-    height: unset
+    float: right;
+    margin-top: .25rem;
+    margin-right: .5rem;
+    border-radius:25px;
+    width: fit-content;
+    height: 10rem;
+    object-fit: contain;
 }
 
 .result .break {
@@ -3993,7 +4000,6 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 }
 
 .category-videos,.category-news,.category-map,.category-music,.category-files,.category-social {
-    border: 1px solid var(--color-result-border);
     border-radius: 0px
 }
 
@@ -4016,14 +4022,11 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
 
 .result-videos img.thumbnail {
     float: left;
-    padding-top: .6rem;
-    padding-right: 1rem;
-    width: 20rem;
-    height: unset
 }
 
 .result-videos .content {
     overflow: hidden
+    height: 4.3ch;
 }
 
 .result-videos .embedded-video iframe {
@@ -4253,16 +4256,12 @@ input.suggestion{
 }
 
 #infoboxes .title,#suggestions .title,#search_url .title,#engines_msg .title,#apis .title {
-    color: var(--color-base-font)
+    color: var(--color-base-font);
+    margin-bottom: 0.5rem;
 }
 
 summary.title {
     cursor: pointer;
-    padding-top: .25rem
-}
-
-.sidebar-collapsible {
-    padding-bottom: .25em
 }
 
 #sidebar-end-collapsible {
@@ -4317,7 +4316,7 @@ summary.title {
     max-width: 100%;
     max-height: 12em;
     display: block;
-    margin: 0 auto;
+    margin: .5em 1em .5em 0;
     padding: 0
 }
 
@@ -4350,7 +4349,8 @@ summary.title {
 }
 ul{ 
     list-style: none;
-    padding: 1rem;
+    padding: .5rem;
+    margin: 0;
 }
 
 #apis input {
@@ -4511,7 +4511,6 @@ ul{
     .center-alignment-no #infoboxes .infobox img {
         float: left;
         max-width: 10em;
-        margin: .5em .5em .5em 0
     }
 
     .center-alignment-no #sidebar {
@@ -4613,7 +4612,11 @@ ul{
     #links_on_top span {
         display:none
     }
-
+    
+    .result-videos img.thumbnail {
+        float: none;
+    }
+    
     .page_with_header {
         margin: 2rem .5rem;
         width: auto
@@ -4631,7 +4634,6 @@ ul{
     #infoboxes .infobox img {
         float: left;
         max-width: 10em;
-        margin: .5em .5em .5em 0
     }
 
     #sidebar, #results-header {
@@ -4663,7 +4665,6 @@ ul{
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
-        padding: 3px 0 0
     }
 
     .result-images {
@@ -4723,8 +4724,7 @@ ul{
     }
 
     article[data-vim-selected] {
-        border: 1px solid var(--color-result-vim-arrow);
-        border-radius: 0px
+        border-radius: 25px
     }
     
     .infobox {
@@ -4749,16 +4749,6 @@ ul{
 
     .result-paper .attributes div span:nth-child(2),.result-packages .attributes div span:nth-child(2) {
         margin-left: .5rem
-    }
-}
-
-@media screen and (max-width: 35em) {
-    .result-videos img.thumbnail {
-        float:none!important
-    }
-
-    .result-videos .content {
-        overflow: inherit
     }
 }
 
