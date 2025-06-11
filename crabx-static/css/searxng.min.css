@@ -3944,12 +3944,13 @@ article[data-vim-selected].category-videos,article[data-vim-selected].category-n
     border: none;
     border-radius: 15px;
     max-width: 45%;
-    height: fit-content;
     max-height: 10rem;
     min-width: 0;
     min-height: 0;
     object-fit: contain;
     box-shadow: var(--color-search-shadow);
+    width: auto;
+    height: auto; 
 }
 
 .result .break {
@@ -4818,4 +4819,8 @@ pre code {
     #q {
         font-size: 16px !important;
     }
+
+    /*.result img.thumbnail {*/
+    /*    max-height: fit-content;*/
+    /*}*/
 }
