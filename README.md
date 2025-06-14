@@ -1,16 +1,19 @@
-# searxng-custom-theme
-a Nord color palette, minimalist, and UI tweaked "theme" for Searxng
+# Simply Nord - a minimalist theme for Searxng
+Supports dark, light, and OLED black modes.
 
-- This is an ongoing UI mod prioritizing: a more compact and minimal ui inspired by the Nord theme.
-- Not built with public instances in mind, home page info and logos are removed
-- Includes UI fixes for mobile layout issues, autocomplete box, and moves suggested search results to a more accessible area. 
-- Dark mode only
-- Some features may be hidden or moved or changed
-- May break after updates to other parts of the project
-- Maybe a little hacky but building off the default theme was the easiest approach
+- UI fixes and reworks for:
+  - mobile layout issues (like all horizontal scrolling bugs!)
+  - autocomplete behavior
+  - suggestions for search
+  - answer/info boxes
+  - results view
+  - image view
+  - video view
+  - news view
+Note: Some features may be hidden or moved or changed
+
   
 Simple to use by downloading and adding the following (2) binds in your Searxng docker compose yml:
-* also remove simple theme parameters from settings.yml (or set to auto)
 ```
 services:
   searxng:
